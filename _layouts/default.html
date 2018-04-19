@@ -14,6 +14,11 @@
         {% if site.logo %}
         <img src="{{site.logo | relative_url}}" alt="Logo"></img>
         {% endif %}
+        {% for page in site.pages %}
+        <a href="{{ page.url }}">
+          <p>{{ page.title }}</p>
+        </a>
+        {% endfor %}
       </header>
       <section>
         
