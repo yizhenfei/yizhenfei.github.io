@@ -1,391 +1,118 @@
 ---
 ---
 
+$ld-frame-primary: #000000;
+$ld-frame-on-primary: #FFFFFF;
+$ld-frame-on-primary-sub: #DDDDDD;
+$ld-frame-secondary: #FF6600;
+$ld-frame-on-secondary: #000000;
+$ld-on-primary: #000000;
+$ld-on-primary-sub: #555555;
+
 body {
     margin: 0 0;
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+    display: flex;
+    height: 100vh;
     font-family: 'Noto Serif SC', serif;
 }
 
 a {
-    text-decoration:none;
-    color: black;
+    text-decoration: none;
 }
 
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 16rem;
-    height: 100%;
+.ld-sidebar {
+    background-color: $ld-frame-primary;
+    color: $ld-frame-on-primary;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 2rem;
+    box-shadow: 0rem 0rem 0.75rem 0rem $ld-frame-primary;
+}
 
-    background-color: #000000;    
+.ld-sidebar a {
+    color: $ld-frame-on-primary;
+}
+
+.ld-sidebar__header {
     font-family: 'Josefin Slab', serif;
 }
 
-.content {
-    margin-left: 18rem;
-    padding-left: 6rem;
-    padding-top: 4rem;
-    width: 50rem;
-}
-
-.sidebar-header {
-}
-
-.sidebar-title {
-    color: white;
+.ld-sidebar__title {
     font-size: 3rem;
-    // font-weight: bold;
     line-height: 0.9;
 }
 
-.sidebar-subtitle {
-    color: #DDDDDD;
-
+.ld-sidebar__subtitle {
+    color: $ld-frame-on-primary-sub;
     text-align: right;
     font-size: 0.8rem;
-    line-height: 3;
+    padding-top: 1rem;
 }
 
-.sidebar-navi {
-    padding-top: 4rem;
+.ld-sidebar__content {
+    padding-top: 15vh;
 }
 
-.sidebar-page {
-    font-size: 1.75rem;
+.ld-sidebar-item {
     width: 100%;
 }
 
-.sidebar-page a {
-    color: white;
+.ld-sidebar-item:hover {
+    background-color: $ld-frame-secondary;
+    color: $ld-frame-on-secondary;
 }
 
-.sidebar-page:hover {
-    background-color: #FF6600;
-    color: black;
+.ld-sidebar-item__text {
+    font-size: 1.75rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
 }
 
-.sidebar-footer {
+.ld-sidebar-footer {
     position: absolute;
-    bottom: 5rem;
-    color: #CCCCCC;
+    bottom: 5vh;
+    color: $ld-frame-on-primary-sub;
     font-size: 0.5rem;
     font-family: 'Helvetica Neue', Helvetica, Arial;
 }
 
-.post-title {
-    font-size: 3rem;
-    font-weight: bold;
+.ld-content-wrapper {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
 }
 
-.post-date {
+.ld-content {
+     padding-left: 6rem;
+     padding-top: 4rem;
+     width: 50rem;
+}
+
+.ld-content a {
+    color: $ld-on-primary;
+}
+
+.ld-post h1 {
+    font-size: 2rem;
+}
+
+.ld-post__title {
+}
+
+.ld-post__date {
     padding-top: 0.5rem;
     font-size: 0.75rem;
-    color: #555555;
+    color: $ld-on-primary-sub;
 }
 
-.post-tags {
+.ld-post__tags {
     font-size: 0.75rem;
-    color: #555555;
+    color: $ld-on-primary;
 }
 
-.posts-title {
-    font-size: 1.75rem;
-    font-weight: bold;
+.ld-post__tag {
+    font-size: 0.5rem;
+    color: $ld-on-primary-sub;
 }
 
-// .sidebar {
-//     background-color:#000000;
-//     color:#ffffff;
-//     font-size:20px;
-//     width:300px;
-//     height:100%;
-//     float:left;
-//     position:fixed;
-//     padding-left: 5px;
-//     padding-right: 5px;
-//     -webkit-font-smoothing:subpixel-antialiased;
-//     font-family: 'Josefin Slab', serif;
-// }
-
-// .sb-title {
-//     font-size: 50px;
-//     line-height: 50px;
-// }
-
-// .sb-subtitle {
-//     text-align: right;
-//     font-size: 15px;
-// }
-
-// .sb-nav {
-//     margin-top: 2em;
-//     margin-bottom: 5em;
-// }
-
-// .sb-nav-item {
-//     font-size: 30px;
-//     line-height: 35px;
-//     width: 100%;
-// }
-
-// .sb-nav-item:hover {
-//     background-color: #FF6600;
-//     color: #000000;
-// }
-
-// .sb-footer {
-//     font-size: 10px;
-//     font-family: 'Helvetica Neue', Helvetica, Arial;
-// }
-
-// main {
-//     background-color: #FFFFFF;
-//     float: left;
-//     left: 310px;
-//     position: fixed;
-//     width: 100%;
-//     height: 100%;
-//     padding: 50px;
-//     // padding: 50px;
-// }
-
-// .postlist a {
-//     color: #000000;
-//     font-size: 15px;
-// }
-
-// a:hover {
-//     background-color: #F49C67;
-// }
-
-// .sidebar a {
-//     color:#D2FDFF;
-// }
-
-// .sidebar a:hover h1 {
-//     background-color: #F49C67;
-// }
-
-// .sb-footer {
-//     font-size:12px;
-//     color:#999;
-//     position:absolute;
-//     bottom:50px;
-//     -webkit-font-smoothing:subpixel-antialiased;
-// }
-
-// .highlight table td { padding: 5px; }
-// .highlight table pre { margin: 0; }
-// .highlight .cm {
-//   color: #999988;
-//   font-style: italic;
-// }
-// .highlight .cp {
-//   color: #999999;
-//   font-weight: bold;
-// }
-// .highlight .c1 {
-//   color: #999988;
-//   font-style: italic;
-// }
-// .highlight .cs {
-//   color: #999999;
-//   font-weight: bold;
-//   font-style: italic;
-// }
-// .highlight .c, .highlight .cd {
-//   color: #999988;
-//   font-style: italic;
-// }
-// .highlight .err {
-//   color: #a61717;
-//   background-color: #e3d2d2;
-// }
-// .highlight .gd {
-//   color: #000000;
-//   background-color: #ffdddd;
-// }
-// .highlight .ge {
-//   color: #000000;
-//   font-style: italic;
-// }
-// .highlight .gr {
-//   color: #aa0000;
-// }
-// .highlight .gh {
-//   color: #999999;
-// }
-// .highlight .gi {
-//   color: #000000;
-//   background-color: #ddffdd;
-// }
-// .highlight .go {
-//   color: #888888;
-// }
-// .highlight .gp {
-//   color: #555555;
-// }
-// .highlight .gs {
-//   font-weight: bold;
-// }
-// .highlight .gu {
-//   color: #aaaaaa;
-// }
-// .highlight .gt {
-//   color: #aa0000;
-// }
-// .highlight .kc {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .kd {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .kn {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .kp {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .kr {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .kt {
-//   color: #445588;
-//   font-weight: bold;
-// }
-// .highlight .k, .highlight .kv {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .mf {
-//   color: #009999;
-// }
-// .highlight .mh {
-//   color: #009999;
-// }
-// .highlight .il {
-//   color: #009999;
-// }
-// .highlight .mi {
-//   color: #009999;
-// }
-// .highlight .mo {
-//   color: #009999;
-// }
-// .highlight .m, .highlight .mb, .highlight .mx {
-//   color: #009999;
-// }
-// .highlight .sb {
-//   color: #d14;
-// }
-// .highlight .sc {
-//   color: #d14;
-// }
-// .highlight .sd {
-//   color: #d14;
-// }
-// .highlight .s2 {
-//   color: #d14;
-// }
-// .highlight .se {
-//   color: #d14;
-// }
-// .highlight .sh {
-//   color: #d14;
-// }
-// .highlight .si {
-//   color: #d14;
-// }
-// .highlight .sx {
-//   color: #d14;
-// }
-// .highlight .sr {
-//   color: #009926;
-// }
-// .highlight .s1 {
-//   color: #d14;
-// }
-// .highlight .ss {
-//   color: #990073;
-// }
-// .highlight .s {
-//   color: #d14;
-// }
-// .highlight .na {
-//   color: #008080;
-// }
-// .highlight .bp {
-//   color: #999999;
-// }
-// .highlight .nb {
-//   color: #0086B3;
-// }
-// .highlight .nc {
-//   color: #445588;
-//   font-weight: bold;
-// }
-// .highlight .no {
-//   color: #008080;
-// }
-// .highlight .nd {
-//   color: #3c5d5d;
-//   font-weight: bold;
-// }
-// .highlight .ni {
-//   color: #800080;
-// }
-// .highlight .ne {
-//   color: #990000;
-//   font-weight: bold;
-// }
-// .highlight .nf {
-//   color: #990000;
-//   font-weight: bold;
-// }
-// .highlight .nl {
-//   color: #990000;
-//   font-weight: bold;
-// }
-// .highlight .nn {
-//   color: #555555;
-// }
-// .highlight .nt {
-//   color: #000080;
-// }
-// .highlight .vc {
-//   color: #008080;
-// }
-// .highlight .vg {
-//   color: #008080;
-// }
-// .highlight .vi {
-//   color: #008080;
-// }
-// .highlight .nv {
-//   color: #008080;
-// }
-// .highlight .ow {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .o {
-//   color: #000000;
-//   font-weight: bold;
-// }
-// .highlight .w {
-//   color: #bbbbbb;
-// }
-// .highlight {
-//   background-color: #f8f8f8;
-// }
 

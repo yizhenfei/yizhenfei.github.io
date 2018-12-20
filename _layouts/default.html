@@ -1,47 +1,47 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
   </head>
   <body>
-    <div class="sidebar">
-      <div class="sidebar-header">
+    <aside class="ld-sidebar">
+      <div class="ld-sidebar__header">
         <a href="{{ site.url }}">
-          <div class="sidebar-title">
-            Living<br>Dangerously
-          </div>
-          <div class="sidebar-subtitle">
-            with Yi Zhenfei
-          </div>
+          <div class="ld-sidebar__title">Living<br>Dangerously</div>
+          <div class="ld-sidebar__subtitle">with Yi Zhenfei</div>
         </a>
-        {% if site.logo %}
-        <img src="{{site.logo | relative_url}}" alt="Logo"></img>
-        {% endif %}
       </div>
-      <div class="sidebar-navi">
-        {% for page in site.pages %}
-        <div class="sidebar-page">
-          <a href="{{ page.url }}">
-            {{ page.title }}
-          </a>
-        </div>
-        {% endfor %}
+      <div class="ld-sidebar__content">
+        <nav>
+          <!-- TODO: mark activated item -->
+          {% for page in site.pages %}
+          <div class="ld-sidebar-item">
+            <a class="ld-sidebar-item__link" href="{{ page.url }}">
+              <span class="ld-sidebar-item__text">{{ page.title }}</span>
+            </a>
+          </div>
+          {% endfor %}
+        </nav>
       </div>
-      <div class="sidebar-footer">
+      <div class="ld-sidebar-footer">
         Powered by Jekyll<br>
         Hosted on GitHub Pages<br>
       </div>
-    </div>
-    <div class="content">
-      <main>
-        
-        {{ content }}
-        
-      </main>
+    </aside>
+    <div class="ld-content-wrapper">
+      <div class="ld-content">
+        <main>
+          
+          {{ content }}
+          
+        </main>
+      </div>
     </div>
   </body>
 </html>

@@ -2,5 +2,5 @@
 layout: default
 ---
 {% for post in site.posts %}
-- [{{ post.date | date: "%-d %B %Y" }} -- {{ post.title }}]({{ post.url }})
+- [{{ post.date | date: "%Y/%m/%d" }} -- {{ post.title }}]({{ post.url }})
 {% endfor %}
