@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+    <title>{{ page.title }}</title>
   </head>
   <body>
     <aside class="ld-sidebar">
@@ -20,13 +21,26 @@
       <div class="ld-sidebar__content">
         <nav>
           <!-- TODO: mark activated item -->
-          {% for page in site.pages %}
           <div class="ld-sidebar-item">
-            <a class="ld-sidebar-item__link" href="{{ page.url }}">
-              <span class="ld-sidebar-item__text">{{ page.title }}</span>
+            <a class="ld-sidebar-item__link" href="{{ '/about.html' | relative_url }}">
+              <span class="ld-sidebar-item__text">About</span>
             </a>
           </div>
-          {% endfor %}
+          <div class="ld-sidebar-item">
+            <a class="ld-sidebar-item__link" href="{{ '/posts.html' | relative_url }}">
+              <span class="ld-sidebar-item__text">Posts</span>
+            </a>
+          </div>
+          <div class="ld-sidebar-item">
+            <a class="ld-sidebar-item__link" href="{{ '/tradelog.html' | relative_url }}">
+              <span class="ld-sidebar-item__text">Tradelog</span>
+            </a>
+          </div>
+          <div class="ld-sidebar-item">
+            <a class="ld-sidebar-item__link" href="{{ '/tools.html' | relative_url }}">
+              <span class="ld-sidebar-item__text">Tools</span>
+            </a>
+          </div>
         </nav>
       </div>
       <div class="ld-sidebar-footer">
