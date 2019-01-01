@@ -2,7 +2,7 @@
 layout: post
 title: "《论个人在历史上的作用问题》读书笔记"
 date: 2018-12-09 20:30:00 +0800
-tags: reading philosophy
+categories: [reading, philosophy]
 ---
 
 全书结构
