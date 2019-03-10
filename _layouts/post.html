@@ -1,22 +1,23 @@
 ---
 layout: default
 ---
-<div class="ld-post">
-  <div class="ld-post__title">
-    <h1>{{ page.title }}</h1>
+<div class="ld-post-full">
+  <div class="ld-post-header">
+    <div class="ld-post-date">
+      {{ page.date | date: "%B %d, %Y" }}
+    </div>
+    <h1 class="ld-post-title">
+      {{ page.title }}
+    </h1>
+    <div class="ld-post-tags">
+      {% for tag in page.tags %}
+      <a> #{{ tag }} </a>
+      {% endfor %}
+    </div>
   </div>
-
-  <div class="ld-post__date">
-    {{  page.date | date: "%Y/%m/%d" }}
+  <div class="ld-post-content">
+    {{ content }}
   </div>
-
-  <div class="ld-post__content">
-    {{content}}
-  </div>
-
-  <div class="ld-post__tags">
-    {% if page.tags %}
-    tags: <em class="ld-post__tag">{{ page.tags | join: "</em> - <em>" }}</em>
-    {% endif %}
+  <div class="ld-post-footer">
   </div>
 </div>
