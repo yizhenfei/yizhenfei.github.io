@@ -1,0 +1,32 @@
+---
+layout: default
+title: POSTS
+---
+<div class="ld-posts">
+  <div class="ld-posts-title">
+    <p>
+      最近更新
+    </p>
+  </div>    
+  {% for post in site.posts %}
+  <div class="ld-posts-item">
+    <div class="ld-post-meta">
+      {{ post.date | date: "%B %d, %Y" }}
+    </div>
+    <h2 class="ld-post-title">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
+    <div class="ld-post-content">
+      <p>
+        {{ post.excerpt }}
+      </p>
+      <p class="ld-post-tags">
+        {% for tag in post.tags %}
+        <a> #{{ tag }} </a>
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+  <!-- [{{ post.date | date: "%Y/%m/%d" }} -- {{ post.title }}]({{ post.url }}) -->
+  {% endfor %}
+</div>
