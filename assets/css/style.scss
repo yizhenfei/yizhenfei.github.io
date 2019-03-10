@@ -230,7 +230,39 @@ h2 {
 
 .ld-about {
     width: 100%;
-    text-align: center;
+}
+
+.ld-about h2 {
+    font-size: 3rem;
+}
+
+.ld-about h2:after {
+    background-color: #d4a259;
+    display: block;
+    content: "";
+    height: 1px;
+    margin-top: .25rem;
+    width: 60px;
+}
+
+.ld-about .ld-quote {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    color: #1d1d1d;
+    font-size: 1.5rem;
+}
+
+.ld-about .ld-signature {
+    color: #aaa;
+    font-size: 1rem;
+    text-align: right;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.ld-about-footer {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 /* Media Queries */
