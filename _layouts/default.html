@@ -14,38 +14,28 @@
   </head>
   <body>
     <aside class="ld-sidebar">
-      <div class="ld-sidebar__header">
-        <a href="{{ site.url }}">
-          <div class="ld-sidebar__title">Living<br>Dangerously</div>
-          <div class="ld-sidebar__subtitle">with Yi Zhenfei</div>
-        </a>
+      <div class="ld-header">
+        <a class="ld-title" href="{{ site.url }}">Living<br>Dangerously</a>
+        <div class="ld-subtitle">with Yi Zhenfei</div>
       </div>
-      <div class="ld-sidebar__content">
-        <nav>
-          <!-- TODO: mark activated item -->
-          <div class="ld-sidebar-item">
-            <a class="ld-sidebar-item__link" href="{{ '/about.html' | relative_url }}">
-              <span class="ld-sidebar-item__text">ABOUT</span>
-            </a>
-          </div>
-          <div class="ld-sidebar-item">
-            <a class="ld-sidebar-item__link" href="{{ '/posts.html' | relative_url }}">
-              <span class="ld-sidebar-item__text">POSTS</span>
-            </a>
-          </div>
-          <div class="ld-sidebar-item">
-            <a class="ld-sidebar-item__link" href="{{ '/knowledge.html' | relative_url }}">
-              <span class="ld-sidebar-item__text">KBASE</span>
-            </a>
-          </div>
-        </nav>
-      </div>
-      <div class="ld-sidebar-footer">
+      <nav class="ld-nav">
+        <!-- TODO: mark activated item -->
+        <div class="ld-nav-item">
+          <a class="ld-nav-link" href="{{ '/about.html' | relative_url }}">ABOUT</a>
+        </div>
+        <div class="ld-nav-item">
+          <a class="ld-nav-link" href="{{ '/posts.html' | relative_url }}">POSTS</a>
+        </div>
+        <div class="ld-nav-item">
+          <a class="ld-nav-link" href="{{ '/knowledge.html' | relative_url }}">KBASE</a>
+        </div>
+      </nav>
+      <div class="ld-footer2">
         Powered by Jekyll<br>
         Hosted on GitHub Pages<br>
       </div>
     </aside>
-    <div class="ld-header">
+    <div class="ld-top">
       <div class="ld-title">
         <a href="{{ site.url }}">
           Living<br>Dangerously
@@ -53,31 +43,20 @@
       </div>
       <div class="ld-inline-nav">
         |
-        <a class="ld-inline-nav-page" href="{{ '/about.html' | relative_url }}">
-          ABOUT
-        </a>
+        <a class="ld-inline-nav-page" href="{{ '/about.html' | relative_url }}">ABOUT</a>
         |
-        <a class="ld-inline-nav-page" href="{{ '/posts.html' | relative_url }}">
-          POSTS
-        </a>
+        <a class="ld-inline-nav-page" href="{{ '/posts.html' | relative_url }}">POSTS</a>
         |
-        <a class="ld-inline-nav-page" href="{{ '/knowledge.html' | relative_url }}">
-          KBASE
-        </a>
+        <a class="ld-inline-nav-page" href="{{ '/knowledge.html' | relative_url }}">KBASE</a>
         |
       </div>
       <div class="ld-inline-nav-end">
-         
       </div>
     </div>
     <div class="ld-content-wrapper">
-      <div class="ld-content">
-        <main>
-          
-          {{ content }}
-          
-        </main>
-      </div>
+      <main class="ld-content">
+          {{ content }}          
+      </main>
     </div>
   </body>
 </html>

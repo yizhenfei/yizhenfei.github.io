@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Knowledge
+title: KNOWLEDGE BASE
 ---
 # Memory
 ## TLB

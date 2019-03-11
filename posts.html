@@ -3,14 +3,12 @@ layout: default
 title: POSTS
 ---
 <div class="ld-posts">
-  <div class="ld-posts-title">
-    <p>
-      最近更新
-    </p>
+  <div class="ld-title">
+      LATEST POSTS
   </div>    
   {% for post in site.posts %}
-  <div class="ld-posts-item">
-    <div class="ld-post-meta">
+  <div class="ld-post">
+    <div class="ld-post-date">
       {{ post.date | date: "%B %d, %Y" }}
     </div>
     <h2 class="ld-post-title">
