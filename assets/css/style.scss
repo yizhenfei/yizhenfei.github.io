@@ -157,6 +157,7 @@ h2:after {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 2rem;
+    padding-bottom: 0.25rem;
     // NOTE(yizhenfei): hmmm... 好像加了阴影以后有点拖泥带水...
     // box-shadow: 0rem 0rem 0.75rem 0rem $ld-frame-primary;
 }
@@ -202,7 +203,7 @@ h2:after {
     box-sizing: border-box;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-top: 3rem;
+    padding-top: 0.5rem;
 }
 
 .ld-content {
@@ -215,6 +216,10 @@ h2:after {
 ////////////////////////////////////////////////////////////////////////////////
 // 文章列表
 ////////////////////////////////////////////////////////////////////////////////
+
+.ld-posts {
+    padding-top: 1rem;
+}
 
 .ld-posts .ld-title {
     color: #333;
@@ -335,6 +340,7 @@ h2:after {
     };
     .ld-content-wrapper {
         overflow: auto;
+        padding-top: 3rem;
     }
     .ld-sidebar {
         display: block;

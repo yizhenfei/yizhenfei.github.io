@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "那些'不可能发生'的Bug (1)"
+title: "那些不可能发生的Bug"
 date: 2019-02-24 01:30:00 +0800
 tags: [C++, Coding]
 ---
