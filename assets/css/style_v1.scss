@@ -1,0 +1,351 @@
+---
+---
+
+// 字体变量
+$ld-site-title-font: 'Josefin Slab', serif;
+$ld-title-font: 'Crimson Text', serif;
+$ld-text-font: 'Karla', sans-serif;
+$ld-code-font: 'Roboto Mono', monospace;
+$ld-misc-font: 'Helvetica Neue', sans-serif;
+
+// 色彩变量
+$ld-frame-primary: #000000;
+$ld-frame-on-primary: #FFFFFF;
+$ld-frame-on-primary-sub: #DDDDDD;
+$ld-frame-secondary: #D4A259;
+$ld-frame-on-secondary: #000000;
+$ld-primary: #FFFFFF;
+$ld-on-primary: #1d1d1d;
+$ld-on-primary-sub: #666;
+$ld-on-primary-light: #aaa;
+$ld-on-primary-highlight: #D4A259;
+$ld-sep: #eee;
+$ld-strong-sep: #D4A259;
+$ld-weak-sep: #999;
+
+html {
+    font-family: $ld-text-font;
+}
+
+body {
+    margin: 0 0;
+    height: 100vh;
+    background-color: $ld-primary;
+    color: $ld-on-primary;
+}
+
+a {
+    text-decoration: none;
+    color: $ld-on-primary;
+}
+
+h1 {
+    font-family: $ld-title-font;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-rendering: optimizeLegibility;
+}
+
+h1:after {
+    background-color: $ld-strong-sep;
+    display: block;
+    content: "";
+    height: 1px;
+    margin-top: .45rem;
+    width: 4rem;
+}
+
+h2 {
+    font-family: $ld-title-font;
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: 2rem;
+    text-rendering: optimizeLegibility;
+}
+
+h2:after {
+    background-color: $ld-sep;
+    display: block;
+    content: "";
+    height: 1px;
+    margin-top: .45rem;
+    width: 4rem;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 侧边栏
+////////////////////////////////////////////////////////////////////////////////
+
+.ld-sidebar {
+    background-color: $ld-frame-primary;
+    color: $ld-frame-on-primary;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    box-shadow: 0rem 0rem 0.75rem 0rem $ld-frame-primary;
+    display: none; // Enable if on stationary device
+}
+
+.ld-sidebar a {
+    color: $ld-frame-on-primary;
+}
+
+.ld-sidebar .ld-header {
+    font-family: $ld-site-title-font;
+}
+
+.ld-sidebar .ld-title {
+    font-size: 3rem;
+    line-height: 0.9;
+}
+
+.ld-sidebar .ld-subtitle {
+    color: $ld-frame-on-primary-sub;
+    text-align: right;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+}
+
+.ld-sidebar .ld-nav {
+    padding-top: 15vh; // TODO(yizhenfei): 15vh 的定位方式会不会导致出屏&与footer冲突
+}
+
+.ld-sidebar .ld-nav-item {
+    width: 100%;
+}
+
+.ld-sidebar .ld-nav-item:hover {
+    background-color: $ld-frame-secondary;
+    color: $ld-frame-on-secondary;
+}
+
+.ld-sidebar .ld-nav-link {
+    width: 100%;
+    font-family: $ld-code-font;
+    font-size: 1.75rem;
+    font-weight: 100;
+    letter-spacing: 0.15rem;
+}
+
+.ld-sidebar .ld-footer2 {
+    position: absolute;
+    bottom: 5vh;
+    color: $ld-frame-on-primary-sub;
+    font-size: 0.5rem;
+    font-family: $ld-misc-font;
+}
+
+.ld-top {
+    background-color: $ld-frame-primary;
+    color: $ld-frame-on-primary;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    // box-shadow: 0rem 0rem 0.75rem 0rem $ld-frame-primary;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 顶部
+////////////////////////////////////////////////////////////////////////////////
+
+.ld-top {
+    background-color: $ld-frame-primary;
+    color: $ld-frame-on-primary;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 0.25rem;
+    // NOTE(yizhenfei): hmmm... 好像加了阴影以后有点拖泥带水...
+    // box-shadow: 0rem 0rem 0.75rem 0rem $ld-frame-primary;
+}
+
+.ld-top a {
+    color: $ld-frame-on-primary;
+}
+
+.ld-top .ld-title {
+    font-family: $ld-site-title-font;
+    font-size: 3rem;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+}
+
+.ld-top .ld-inline-nav {
+    font-family: $ld-code-font;
+    font-weight: 100;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top: 1px solid $ld-sep;
+    border-bottom: 1px solid $ld-sep;
+    color: $ld-weak-sep;
+}
+
+.ld-top .ld-inline-nav-end {
+    margin: 0 0 0 0;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 页面内容
+////////////////////////////////////////////////////////////////////////////////
+
+.ld-content-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
+
+.ld-content {
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 文章列表
+////////////////////////////////////////////////////////////////////////////////
+
+.ld-posts {
+    padding-top: 1rem;
+}
+
+.ld-posts .ld-title {
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0.14rem;
+    line-height: 1.2;
+    border-bottom: 1px solid $ld-strong-sep;
+    padding-bottom: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.ld-posts .ld-post {
+    border-bottom: 1px solid $ld-sep;
+    margin-bottom: 1.67rem;
+}
+
+.ld-posts .ld-post-date {
+    font-size: 0.77rem;
+    color: $ld-on-primary-light;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.ld-posts .ld-post-content {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.67;
+    margin-bottom: 0.5rem;
+}
+
+.ld-posts .ld-post-tags {
+    color: $ld-on-primary-highlight;
+}
+
+.ld-posts .ld-post-tags a {
+    color: $ld-on-primary-highlight;
+    display: inline-block;
+    text-decoration: none;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 文章页面
+////////////////////////////////////////////////////////////////////////////////
+
+.ld-post-full .ld-post-date {
+    font-size: 0.77rem;
+    color: $ld-on-primary-light;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.ld-post-full .ld-post-tags {
+    font-size: 0.85rem;
+}
+
+.ld-post-full .ld-post-tags a {
+    color: $ld-on-primary-highlight;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.ld-post-full .ld-post-content {
+    margin-top: 2rem;
+    line-height: 1.6rem;
+    color: $ld-on-primary-sub;
+}
+
+.ld-post-full .ld-post-content>p:first-child:first-letter {
+    color: $ld-on-primary;
+    font-weight: 400;
+    font-size: 3rem;
+    font-family: $ld-title-font;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.1rem;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+.ld-post-full .ld-post-footer {
+    margin-top: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// 关于页面
+////////////////////////////////////////////////////////////////////////////////
+
+.ld-about {
+    padding-bottom: 6rem;
+}
+
+.ld-about .ld-quote {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $ld-sep;
+}
+
+.ld-about .ld-signature {
+    color: $ld-on-primary-light;
+    font-size: 1rem;
+    text-align: right;
+    padding-top: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 400px) {
+}
+
+@media (min-width: 750px) {
+    body {
+        display: flex;
+    };
+    .ld-content-wrapper {
+        overflow: auto;
+        padding-top: 3rem;
+    }
+    .ld-sidebar {
+        display: block;
+    }
+    .ld-top {
+        display: none;
+    }
+}
